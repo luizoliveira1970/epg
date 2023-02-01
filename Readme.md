@@ -15,3 +15,5 @@
 #git add .
 #git commit -m "Projeto Inicial"
 #git push -u origin main
+
+git add . && git commit -m "Projeto Inicial" && git push -u origin main

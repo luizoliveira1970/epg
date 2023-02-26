@@ -16,7 +16,7 @@
 
 git remote set-url origin git@github.com:luizoliveira1970/epg.git
 
-wget https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz && gunzip -f epg_ripper_BR1.xml.gz && git add . && git commit -m "Atualizacao" && git push -u origin main
+cd ~/Documentos/epg/ && wget https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz && gunzip -f epg_ripper_BR1.xml.gz && git add . && git commit -m "Atualizacao" && git push -u origin main
 
 wget https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz && gunzip -f epg_ripper_BR1.xml.gz && git add . && git commit -m "`date +'%F'`" && git push -u origin main
 

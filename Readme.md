@@ -1,1 +1,1 @@
-Repositório destinado à atualizar epg BR
+Repositório destinado à atualizar epg BR.

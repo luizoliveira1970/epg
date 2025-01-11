@@ -1,0 +1,62 @@
+#PRIMEIROS PASSOS
+#CONSIDERANDO QUE O DIRETÓRIO JÁ ESTEJA CRIADO NO GITHUB
+
+#caso ainda nãio esteja no root
+	sudo su
+	
+#vai para pasta raiz do root
+	cd ~
+	
+#criar diretório de trabalho git, no diretório raiz do root
+	mkdir epg-github
+	
+#entrar no diretório
+	cd epg-github
+	
+#inicia o serviço git no diretório atual
+	git init
+	
+#conectar repositório local com remoto
+	git remote add origin https://github.com/luizoliveira1970/epg.git
+
+#gerar chave ssh
+	cd ~/.ssh && ssh-keygen #não colocar senhas
+	cd ~/epg-github
+	ssh-keygen -t ed25519 -C "luix.for@gmail.com" #cria identidade
+	ssh-add ~/.ssh/id_ed25519 #adiciona a identidade à chave
+	cat ~/.ssh/id_ed25519.pub # copiar o resultado para gerar uma ssh no github
+		#dentro do github, selecionar a foto > settings > SSH and GPG keys
+		#clicar no botão 'New SSH key' > digite um nome e cole a chave copiada
+	ssh -vT git@github.com #confira se foi autenticado
+	
+#Incializa o diretório local com o github
+	git clone git@github.com:luizoliveira1970/epg.git
+	
+#Entra no diretório trazido do github
+	cd epg
+	
+#Faz o download da última versão do arquivo de epg e descompacta
+	wget https://epgshare01.online/epgshare01/epg_ripper_BR1.xml.gz && gunzip -f epg_ripper_BR1.xml.gz
+	
+#Adiciona o arquivo descompactado ao git
+	git add epg_ripper_BR1.xml
+	
+#Gera o commit e adiciona o nome
+	git commit -m "Atualizado"
+	
+#Envia o arquivo de volta ao github, já atualizado
+	git push -u origin main
+
+#Comando para o crontab
+crontab-e
+00  05 * * * ~/./epg.sh >> ~/epg.log
+
+
+#You can easily remove passphrase of your key by using the following command
+ssh-keygen -p
+#On the first prompt, enter the file path (or press Enter to use the default)
+#Second prompt, enter the old passphrase
+#Next prompt, just press enter to unset the passphrase
+
+#Looks like this is the easiest way!
+https://youtu.be/en1dycYtL48?si=D8B1NbH6mVqRWp8n

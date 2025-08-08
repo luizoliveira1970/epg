@@ -506,4 +506,16 @@ Changes not staged for commit:
 	modified:   epg.log
 
 Untracked files:
-  (use "
+  (use "[main 1959c9b] Atualizado
+ Date: Thu Aug 7 05:00:07 2025 -0300
+ 12 files changed, 75995 insertions(+), 86645 deletions(-)
+ create mode 100644 epg_ripper_BR1.xml.gz.10
+ create mode 100644 epg_ripper_BR1.xml.gz.11
+ create mode 100644 epg_ripper_BR1.xml.gz.2
+ create mode 100644 epg_ripper_BR1.xml.gz.3
+ create mode 100644 epg_ripper_BR1.xml.gz.4
+ create mode 100644 epg_ripper_BR1.xml.gz.5
+ create mode 100644 epg_ripper_BR1.xml.gz.6
+ create mode 100644 epg_ripper_BR1.xml.gz.7
+ create mode 100644 epg_ripper_BR1.xml.gz.8
+ create mode 100644 epg_ripper_BR1.xml.gz.9
